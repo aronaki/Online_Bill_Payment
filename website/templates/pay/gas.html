@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GAS</title>
+</head>
+
+<body>
+
+<link rel="stylesheet" type="text/css" href="style_gas.css">
+
+<h1>GAS Bill payment page</h1>
+
+<form action='#' method='post'>
+<h3>pay your Gas bill</h3>
+
+<div class="note">
+<span>
+
+<select name="operator">
+<option value="Adani gas">Adani gas</option>
+<option value="HP gas">HP gas</option>
+<option value="Indane gas">Indane gas</option>
+
+</select>
+
+</span>
+</div>
+
+<label for="gas">Enter your customer number</label>
+<input type="number" name="customerid">
+
+<input type="submit" name="submit" value="proceed">
+
+
+</form>
+
+
+</body>
+
+</html>

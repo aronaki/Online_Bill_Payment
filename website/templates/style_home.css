@@ -1,0 +1,67 @@
+*{
+margin: 0;
+padding: 0;
+background-color: grey;
+}
+header
+{
+
+}
+ul{
+float: right;
+margin: 25px;
+}
+ul li{
+display: inline-block;
+
+}
+ul li a{
+background-color: white;
+color: blue;
+padding: 5px 10px;
+transition: 0.6s ease;
+border: 1px solid black;
+}
+ul li a:hover{
+back-color: white;
+color: red;
+}
+.title h1
+{
+color: #fff;
+font-size: 70px;
+margin: 20px;
+margin-left: 200px;
+}
+.row1{
+margin-left: 50px;
+padding-left: 30px;
+}
+.row1 .log a{
+background-color: blue;
+color: red;
+border: 1px solid black;
+margin: 20px;
+padding: 10px;
+
+}
+ul .row1 .log{
+margin: 30px;
+padding: 30px;
+}
+
+.column{
+float: left;
+margin: 3%;
+padding: 10px;
+}
+.row::after{
+content:"";
+clear: both;
+display: flex;
+}
+img
+{
+border: 2px;
+cursor: pointer;
+}

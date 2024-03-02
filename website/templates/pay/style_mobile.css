@@ -1,0 +1,19 @@
+html{
+margin: 0;
+padding: 0;
+background-color: grey;
+}
+.note{
+margin: 50px;
+padding: 12px 5px;
+display: inline-block;
+}
+input [type=text]
+{
+width: 285px;
+padding: 12px 5px;
+margin: 8px 0;
+display: inline-block;
+background-color: white;
+border: 1px solid #ccc;
+}

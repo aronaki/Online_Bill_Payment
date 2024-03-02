@@ -1,0 +1,420 @@
+<!doctype html>
+<html>
+<head>
+<title>Cable</title>
+</head>
+
+<body>
+
+<link rel="stylesheet" type="text/css" href="style_cable.css">
+
+<h1>Cable Bill payment page</h1>
+<h3>pay your cable Bill</h3>
+
+<form action='#' method='post'>
+
+
+<div class="note">
+<span>
+
+<select name="operator">
+<option value="incable digital TV">incable digital TV</option>
+<option value="Ucn TV">UCN TV</option>
+<option value="Dish TV">Dish Tv</option>
+<option value="Big Tv">Big Tv</option>
+
+</select>
+
+</span>
+</div>
+
+
+<label>Enter Customer id</label>
+<input type="text" name="cid">
+<input type="submit" name="submit" value="proceed">
+
+
+</form>
+
+<?php
+ob_start();
+
+$connection = mysql_connect("localhost","root","passwd") or die("server not connected");
+$db = mysql_select_db("16ucs114", $connection) or die("db not connected");
+
+if(isset($_POST['submit'])){
+
+$cid = $_POST['cid'];
+
+$operator = $_POST['operator'];
+
+
+$query = mysql_query("insert into cable (Customer_id,Operator) values ('$cid', '$operator')");
+
+header("location:details/cable_bill.php");
+}
+ob_end_flush();
+?>
+
+</body>
+
+</html>
+<?php 
+
+$connection = mysql_connect("localhost","root","123") or die("server not connected");
+$db = mysql_select_db("16ucs114", $connection) or die("db not connected");
+?><!doctype html>
+<html>
+<head>
+<title>DTH</title>
+</head>
+
+<body>
+
+<link rel="stylesheet" type="text/css" href="style_dth.css">
+
+<h1>Dth Bill payment page</h1>
+
+<form action='#' method='post'>
+Username: <input type="text" name="username">
+
+<div class="note">
+<span>
+
+<select name="operator">
+<option value="Dish TV">DISH TV</option>
+<option value="Reliance TV">Reliance TV</option>
+<option value="Airtel">Airtel Digital TV</option>
+<option value="Sun Direct">Sun Direct</option>
+<option value="TATA">TATA SKy</option>
+</select>
+
+</span>
+</div>
+
+<label for="dth">Enter your DTH number</label>
+<input type="number" name="dth_number">
+
+<input type="submit" name="submit" value="proceed">
+
+
+</form>
+
+<?php
+ob_start();
+
+$connection = mysql_connect("localhost","root","123") or die("server not connected");
+$db = mysql_select_db("16ucs114", $connection) or die("db not connected");
+
+if(isset($_POST['submit'])){
+$username = $_POST['username'];
+$operator = $_POST['operator'];
+$dth = $_POST['dth_number'];
+$query = mysql_query("insert into dth (username,operator,DTH) values ('$username', '$operator', '$dth')");
+
+header("location:details/dth_bill.php");
+}
+ob_end_flush();
+?>
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>EB</title>
+</head>
+
+<body>
+
+<link rel="stylesheet" type="text/css" href="style_eb.css">
+
+<h1>EB Bill payment page</h1>
+
+<form action='#' method='post'>
+<h3>pay your Eelectricity bill</h3>
+
+<div class="note">
+<span>
+
+<select name="operator">
+<option value="Tamilnadu EB">TNEB</option>
+<option value="Bescom Bangalore">BESCOM</option>
+<option value="Best Mumbai">Best Mumbai</option>
+
+</select>
+
+</span>
+</div>
+
+<label for="gas">Enter your account id</label>
+<input type="number" name="accountid">
+
+<input type="submit" name="submit" value="proceed">
+
+
+</form>
+
+<?php
+ob_start();
+
+$connection = mysql_connect("localhost","root","passwd") or die("server not connected");
+$db = mysql_select_db("16ucs114", $connection) or die("db not connected");
+
+if(isset($_POST['submit'])){
+
+$operator = $_POST['operator'];
+$aid = $_POST['accountid'];
+
+$query = mysql_query("insert into eb (account_id,operator) values ('$aid','$operator')");
+
+header("location:details/eb_bill.php");
+}
+ob_end_flush();
+?>
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>GAS</title>
+</head>
+
+<body>
+
+<link rel="stylesheet" type="text/css" href="style_gas.css">
+
+<h1>GAS Bill payment page</h1>
+
+<form action='#' method='post'>
+<h3>pay your Gas bill</h3>
+
+<div class="note">
+<span>
+
+<select name="operator">
+<option value="Adani gas">Adani gas</option>
+<option value="HP gas">HP gas</option>
+<option value="Indane gas">Indane gas</option>
+
+</select>
+
+</span>
+</div>
+
+<label for="gas">Enter your customer number</label>
+<input type="number" name="customerid">
+
+<input type="submit" name="submit" value="proceed">
+
+
+</form>
+
+<?php
+ob_start();
+
+$connection = mysql_connect("localhost","root","passwd") or die("server not connected");
+$db = mysql_select_db("16ucs114", $connection) or die("db not connected");
+
+if(isset($_POST['submit'])){
+
+$operator = $_POST['operator'];
+$cid = $_POST['customerid'];
+
+$query = mysql_query("insert into gas (customer_id,operator) values ('$cid','$operator')");
+
+
+header("location:details/gas_bill.php");
+}
+ob_end_flush();
+?>
+
+</body>
+
+</html>
+<html>
+<link rel="stylesheet" type="text/css" href="style_mobile.css">
+<head><title>Mobile</title></head>
+<body>
+<style type="text/css">
+<!--
+.style1 {font-family: "Times New Roman", Times, serif}
+-->
+</style>
+
+
+<div align="center" class="style1">
+  <h1>Welcome To Phone Bill Payment </h1>
+<h2>Tell us your number and we will figure out rest</h2>
+</div>
+<form method="post" action="#">
+<label for="phone">Enter your phone number:</label>
+<input type="tel" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+
+
+<div class="note">
+<span class="drop">
+<select name="operator">
+<option value="jio">JIO</option>
+<option value="airtel">airtel</option>
+<option value="bsnl">bsnl</option>
+<option value="tata">TATA</option>
+</select>
+</span>
+<span class="drop">
+<select name="circle">
+<option value="tamilnadu">Tamilnadu</option>
+<option value="Kerala">Kerala</option>
+<option value="Andhra">Andhra</option>
+<option value="Karnataka">Karnataka</option>
+</select>
+</span>
+</div>
+
+<input type="submit" name="submit" value="submit">
+
+<?php
+ob_start();
+
+session_start();
+
+$connection = mysql_connect("localhost","root","123") or die("server not connected");
+$db = mysql_select_db("16ucs114", $connection) or die("db not connected");
+
+if(isset($_POST['submit'])){
+
+$operator = $_POST['operator'];
+$circle = $_POST['circle'];
+$date = date('Y-m-d H:i:s');
+$phone = $_POST['phone'];
+
+
+$query = mysql_query("insert into mobile (phone,operator,circle,date) values ('$phone','$operator','$circle','$date')");
+
+header("location:details/mobile_bill.php");
+}
+ob_end_flush();
+?>
+</form>
+
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<body>
+<link rel="stylesheet" href="style_signup.css">
+<script language="javascript" src="test.js"></script>
+
+<h1>Already have an account</h1>
+<a href='details/login.php'>
+<input type="submit" class="button1" value="Login">
+</a>
+<div id="conatiner">
+<form method="post" onSubmit="return validateconfirmpassword();">
+<label for="uname"><b>Username :</b></label>
+<input type="text" class="button2" placeholder="Enter user name" name="uname" required><br>
+
+<label for="gender"><b>Gender:</b></label>
+<input type="radio" class="r1" name="gender" value="male" required>Male<br><input type="radio" class="r2" name="gender" value="female" required>Female<br>
+
+<label for="email"><b>E-mail:</b></label>
+<input type="email" class="button2" placeholder="Email" name="email" required><br>
+
+<label for="phone"><b>Phone:</b></label>
+<input type="number" class="button2" placeholder="phone" name="phone" required><br>
+<label for="pword"><b>Password :</b></label>
+<input type="password" class="button2" placeholder="Enter Password" name="pword" onKeyUp="validateconfirmpassword" onBlur="validateconfirmpassword" required><br>
+<label for="cpword"><b>Confirm Password :</b></label>
+<input type="password" class="button2" placeholder="Confirm Password" name="cpword" onKeyUp="validateconfirmpassword" onBlur="validateconfirmpassword" required><br>
+
+<div class="lower">
+
+<input type="submit" name="submit" class="button1" value="sign up" onClick="validateconfirmpassword()">
+
+
+</div>
+<?php
+
+session_start();
+include_once "dbconnect.php";
+
+extract($_POST);
+if(isset($_POST['submit'])){
+
+if($pword==$cpword){
+$sql = mysql_query("insert into user (username,gender,email,phone,password,cpassword) values ('$uname', '$gender','$email','$phone','$pword','$cpword')");
+
+echo "submitted successfully";
+}
+else
+{ echo '<script>alert("password mismatch");</script>';
+}
+}
+?>
+</form>
+</div>
+</body>
+</html><!doctype html>
+<html>
+<head>
+<title>Water</title>
+</head>
+
+<body>
+
+<link rel="stylesheet" type="text/css" href="style_water.css">
+
+<h1>water Bill payment page</h1>
+<h3>pay your water Bill</h3>
+
+<form action='#' method='post'>
+
+
+<div class="note">
+<span>
+
+<select name="board">
+<option value="Bangalore water supply">Bangalore water supply</option>
+<option value="Belagavi city corp">Belagavi city corp</option>
+<option value="Bhopal Municipal corp">Bhopal municipal corp</option>
+<option value="Delhi Board">Delhi Board</option>
+
+</select>
+
+</span>
+</div>
+
+
+<label>Enter Consumer number</label>
+<input type="text" name="cnumber">
+<input type="submit" name="submit" value="proceed">
+
+
+</form>
+
+<?php
+ob_start();
+
+$connection = mysql_connect("localhost","root","passwd") or die("server not connected");
+$db = mysql_select_db("16ucs114", $connection) or die("db not connected");
+
+if(isset($_POST['submit'])){
+$board = $_POST['board'];
+
+$cn = $_POST['cnumber'];
+
+
+$query = mysql_query("insert into water (Board,Consumer_no) values ('$board', '$cn')");
+
+header("location:details/water_bill.php");
+}
+ob_end_flush();
+?>
+
+</body>
+
+</html>
+

@@ -1,0 +1,92 @@
+html{
+margin: 0;
+padding: 0;
+background-color: grey;
+}
+.note{
+margin: 50px;
+padding: 12px 5px;
+display: inline-block;
+}
+input [type=text]
+{
+width: 285px;
+padding: 12px 5px;
+margin: 8px 0;
+display: inline-block;
+background-color: white;
+border: 1px solid #ccc;
+}
+html{
+background-color: grey;
+}html{
+background-color: grey;
+}html{
+background-color: grey;
+}html{
+margin: 0;
+padding: 0;
+background-color: grey;
+}
+.note{
+margin: 50px;
+padding: 12px 5px;
+display: inline-block;
+}
+input [type=text]
+{
+width: 285px;
+padding: 12px 5px;
+margin: 8px 0;
+display: inline-block;
+background-color: white;
+border: 1px solid #ccc;
+}
+ html
+{
+background-color: grey;
+} 
+form{
+background-color: white;
+margin: 50px;
+margin-left: 430px;
+width: 300px;
+border: 3px solid #f1f1f1;
+padding: 20px;
+} 
+.button2{
+width: 285px;
+padding: 12px 5px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+} 
+.r1{
+  cursor: pointer;
+}
+.r2{
+  margin-left: 65px;
+  cursor: pointer;
+}
+.button1{
+background-color: #4CAF50;
+color: white;
+padding: 14px 5px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 250px;
+}
+/* .lower{
+background-color: ;
+color: white;
+padding: 14px 5px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 250px; 
+
+} */
+html{
+background-color: grey;
+}
